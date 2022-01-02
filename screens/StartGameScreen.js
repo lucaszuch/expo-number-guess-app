@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Text, Button, TouchableWithoutFeedback, Keyboard, Alert} from 'react-native';
+import {View, StyleSheet, Text, TouchableWithoutFeedback, Keyboard, Alert} from 'react-native';
 
 // Componets
 import Card from '../components/Card';
@@ -83,7 +83,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    marginVertical: 10
+    marginVertical: 10,
+    fontFamily: 'open-sans-bold'
   },
   inputContainer: {
     width: '95%',
