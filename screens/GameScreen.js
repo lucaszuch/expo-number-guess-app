@@ -66,8 +66,14 @@ const GameScreen = props => {
         <Text>Computer Guess:</Text>
         <NumberBox>{currentGuess}</NumberBox>
         <View style={styles.buttonsContainer}>
-          <AppButton styles={styles.controlButtons} title={'SMALLER'} onPress={nextGuessHandler.bind(this, 'smaller')}/>
-          <AppButton styles={styles.controlButtons} title={'GREATER'} onPress={nextGuessHandler.bind(this, 'greater')}/>
+          <AppButton
+            title={'SMALLER'}
+            onPress={nextGuessHandler.bind(this, 'smaller')}
+          />
+          <AppButton
+            title={'GREATER'}
+            onPress={nextGuessHandler.bind(this, 'greater')}
+          />
         </View>
       </Card>
     </View>
@@ -86,12 +92,9 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     flexDirection: 'row',
-    width: '100%',
+    width: '80%',
     justifyContent: 'space-between',
-    paddingHorizontal: 30
-  },
-  controlButtons: {
-    width: 80
+    paddingHorizontal: 20
   }
 });
 

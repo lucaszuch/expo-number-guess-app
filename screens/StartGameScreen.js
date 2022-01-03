@@ -6,6 +6,7 @@ import Card from '../components/Card';
 import Input from '../components/Input';
 import AppButton from '../components/AppButton';
 import NumberBox from '../components/NumberBox';
+import Fonts from '../constants/Fonts';
 
 const StartGameScreen = props => {
   // Hooks
@@ -45,7 +46,11 @@ const StartGameScreen = props => {
       <NumberBox>
         {enteredNumber}
       </NumberBox>
-      <AppButton title={'START GAME'} onPress={() => {props.onStartGame(enteredNumber)}}/>
+      <AppButton
+        title={'START GAME'}
+        onPress={() => {props.onStartGame(enteredNumber)}}
+        style={styles.warningButton}
+      />
     </Card>
   }
 
@@ -65,8 +70,16 @@ const StartGameScreen = props => {
             value = {enteredValue}
             />
           <View style={styles.buttonsContainer}>
-            <AppButton style={styles.inputButtons} title={'RESET'} onPress={() => {resetInputHandler()}}/>
-            <AppButton style={styles.inputButtons} title={'CONFIRM'} onPress={() => {confirmInputHandler()}}/>
+            <AppButton
+              style={styles.inputButtons}
+              title={'RESET'}
+              onPress={() => {resetInputHandler()}}
+            />
+            <AppButton
+              style={styles.inputButtons}
+              title={'CONFIRM'}
+              onPress={() => {confirmInputHandler()}}
+            />
           </View>
         </Card>
         {warning}
@@ -84,7 +97,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     marginVertical: 10,
-    fontFamily: 'open-sans-bold'
+    fontFamily: Fonts.openSansBold
   },
   inputContainer: {
     width: '95%',
